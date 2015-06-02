@@ -1,1 +1,24 @@
-<%= @beer.inspect %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @beer.name %>
+</p>
+
+<p>
+  <strong>Brewer:</strong>
+  <%= @beer.brewer %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @beer.beer_type %>
+</p>
+
+<p>
+  <strong>ABV %:</strong>
+  <%= @beer.abv %>
+</p>
+
+<%= link_to 'Edit', edit_beer_path(@beer) %> |
+<%= link_to 'Back', beers_path %>

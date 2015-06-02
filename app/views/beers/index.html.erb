@@ -1,9 +1,23 @@
+<p id="notice"><%= notice %></p>
+<h1>All Brewz</h1>
+
+<h3><%= link_to 'Post a New Beer!', new_beer_path %>
+<%= link_to 'Users', users_path %></h3>
+
+
 <% @beers.each do |beer| %>
 	<p>
 	<strong>Name: </strong><%= beer.name %>
 	<strong>Brewer: </strong><%= beer.brewer %>
 	<strong>Type: </strong><%= beer.beer_type %>
 	<strong>ABV: </strong><%= beer.abv %>
+	<strong><%= link_to 'Show', beer %></strong>
+    <strong><%= link_to 'Edit', edit_beer_path(beer) %></strong>
+    <strong><%= link_to 'Destroy', beer, method: :delete, data: { confirm: 'Are you sure?' } %></strong>
 
 	</p>
-<% end %>
+
+	<% end %>
+
+	
+
